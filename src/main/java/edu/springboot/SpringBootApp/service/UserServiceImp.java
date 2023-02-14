@@ -5,14 +5,12 @@ package edu.springboot.SpringBootApp.service;
 import edu.springboot.SpringBootApp.dao.UserDao;
 import edu.springboot.SpringBootApp.model.User;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
 @Service
-@Repository
 public class UserServiceImp implements UserService {
 
     @Autowired
@@ -46,5 +44,4 @@ public class UserServiceImp implements UserService {
     public List<User> listUsers() {
         return userDao.listUsers();
     }
-
 }

@@ -31,7 +31,7 @@ public class UserController {
         return "index";
     }
 
-    @RequestMapping("/users/add")
+    @RequestMapping("add")
     public String addUser(Model model) {
 
         model.addAttribute("user", new User());
@@ -44,7 +44,7 @@ public class UserController {
         return "redirect:/users/";
     }
 
-    @GetMapping(value = "/users/{id}/update")
+    @GetMapping(value = "/{id}/update")
     public String edit(Model model, @PathVariable("id") Long id) {
         model.addAttribute("user", userService.getUser(id));
         return "update";

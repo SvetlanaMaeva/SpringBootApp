@@ -23,7 +23,7 @@
         <td th:text="${user.lastName}"/>
         <td th:text="${user.email}"/>
         <td>
-            <form th:method="GET" th:action="@{users/{id}/update(id=${user.getId()})}">
+            <form th:method="GET" th:action="@{{id}/update(id=${user.getId()})}">
                 <input type="submit" style="color: #db71c9" th:value="Изменить">
             </form>
         </td>
@@ -36,6 +36,6 @@
     </tbody>
 </table>
 <br>
-<input type="button" style="color: #db71c9" value="Добавить пользователя" onclick="window.location.href = 'users/add'"/>
+<input type="button" style="color: #db71c9" value="Добавить пользователя" onclick="window.location.href = 'add'"/>
 </body>
 </html>
